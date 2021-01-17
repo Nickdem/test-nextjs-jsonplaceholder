@@ -30,7 +30,12 @@ export default function InfoBlock() {
             <ul className="info-block__list">
               {renderInfoList(info.list)}
             </ul>
-            <button onClick={() => router.push(`/posts/${info.id}`)} className={router.pathname === '/posts/[id]' ? "info-block__button hide" : "info-block__button"}>Смотреть посты</button>
+            <button
+              onClick={() => router.push(`/posts/${info.id}`)}
+              className={router.pathname === '/posts/[id]' ? "info-block__button hide" : "info-block__button"}
+            >
+              Смотреть посты
+            </button>
           </div>
         </>
       }

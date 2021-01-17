@@ -14,11 +14,11 @@ export default function PostCard({ item }) {
   };
 
   return (
-    <li key={item.id}>
-      <div className="posts__item item">
-        <h6 className="posts__item-title item-title">{item.title}</h6>
-        <p className="posts__item-text">{item.body}</p>
-        <a className="posts__item-link item-link" onClick={(e) => clickHandler(e, item.id)}>{show ? 'Скрыть комментарии' : 'Открыть комментарии'}</a>
+    <li className="page__list-item" key={item.id}>
+      <div className="post-card item">
+        <h6 className="post-card__title item-title">{item.title}</h6>
+        <p className="post-card__text">{item.body}</p>
+        <a className="post-card__link item-link" onClick={(e) => clickHandler(e, item.id)}>{show ? 'Скрыть комментарии' : 'Открыть комментарии'}</a>
         <Comments id={item.id} show={show} />
       </div>
     </li>

@@ -13,11 +13,11 @@ export default function UserCard({ item }) {
   };
 
   return (
-    <li key={item.id}>
-      <div className="users__item item">
-        <h6 onClick={() => dispatch(setInfo(item))} className="users__item-title item-title">{item.name}</h6>
-        <p className="users__item-text">{item.address.city}</p>
-        <a className="users__item-link item-link" onClick={(e) => onLinkClick(e, item)}>Смотреть посты</a>
+    <li className="page__list-item" key={item.id}>
+      <div className="user-card item">
+        <h6 className="user-card__title item-title" onClick={() => dispatch(setInfo(item))}>{item.name}</h6>
+        <p className="user-card__text">{item.address.city}</p>
+        <a className="user-card__link item-link" onClick={(e) => onLinkClick(e, item)}>Смотреть посты</a>
       </div>
     </li>
   );

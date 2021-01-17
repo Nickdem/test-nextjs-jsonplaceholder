@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { PostsPage } from '../../containers';
+import PostCard from '../../components/post-card';
+import { Page } from '../../containers';
 import { setInfo, setPosts } from '../../store';
 
 export default function Posts(props) {
@@ -15,7 +16,7 @@ export default function Posts(props) {
 
   if (props.error) return <p>Что-то пошло не так! {props.error}</p>;
 
-  return <PostsPage posts={posts} />;
+  return <Page Component={PostCard} list={posts} title='Посты' />;
 };
 
 export async function getStaticProps() {

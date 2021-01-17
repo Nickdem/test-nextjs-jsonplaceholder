@@ -1,14 +1,12 @@
-.users {
-  &__item {
-    padding: 24px 30px 32px;
-  }
+.user-card {
+  padding: 24px 30px 32px;
 
-  &__item-title {
+  &__title {
     margin-bottom: 2px;
     cursor: pointer;
   }
 
-  &__item-text {
+  &__text {
     font-size: 14px;
     line-height: 18px;
     color: $light-color;

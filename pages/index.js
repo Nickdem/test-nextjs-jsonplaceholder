@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { UsersPage } from '../containers';
+import UserCard from '../components/user-card';
+import { Page } from '../containers';
 import { setUsers } from '../store';
 
 function Home(props) {
@@ -11,10 +12,9 @@ function Home(props) {
     dispatch(setUsers(props.users));
   }, []);
 
-
   if (props.error) return <p>Что-то пошло не так! {props.error}</p>;
 
-  return <UsersPage users={props.users} />;
+  return <Page Component={UserCard} list={props.users} title='Пользователи' />;
 };
 
 export async function getStaticProps() {
