@@ -1,0 +1,25 @@
+.comments {
+  max-height: 0px;
+  transition: all .5s;
+
+  &.show {
+    max-height: 1000px;
+  }
+
+  &__item {
+    margin: 18px 0;
+  }
+
+  &__item-title {
+    font-size: 16px;
+    line-height: 21px;
+    color: $headings-color;
+    margin-bottom: 4px;
+  }
+
+  &__item-text {
+    font-size: 14px;
+    line-height: 18px;
+    color: $light-color;
+  }
+}

@@ -1,0 +1,19 @@
+.posts {
+  &__item {
+    padding: 21px 30px;
+  }
+
+  &__item-title {
+    padding-bottom: 11px;
+    border-bottom: 1px solid #ECEAF2;
+  }
+
+  &__item-text {
+    padding-top: 13px;
+    padding-bottom: 12px;
+    font-size: 16px;
+    line-height: 21px;
+    color: $headings-color;
+  }
+}
+
